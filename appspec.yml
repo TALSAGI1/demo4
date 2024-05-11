@@ -1,0 +1,19 @@
+version: 0.0
+os: linux
+files:
+  - source: / 
+    destination: /project
+hooks:
+  BeforeInstall:
+    - location: scripts/install-dependencies.sh
+      timeout: 60
+      runas: root
+  ApplicationStart:    
+    - location: scripts/run_nginx.sh
+      timeout: 60
+      runas: root
+  ApplicationStop:
+    - location: scripts/stop_nginx.sh
+      timeout: 300
+      runas: root
+
