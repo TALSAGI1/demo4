@@ -1,3 +1,3 @@
 #!/bin/bash
-sudo docker stop nginx-tomer
-sudo docker rm nginx-tomer
+sudo docker stop nginx
+sudo docker rm nginx
